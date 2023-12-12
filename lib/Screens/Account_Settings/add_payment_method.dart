@@ -1,7 +1,6 @@
 import 'package:delivery_app/components/lower_text.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_credit_card/credit_card_form.dart';
-import 'package:flutter_credit_card/credit_card_model.dart';
+import 'package:flutter_credit_card/flutter_credit_card.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 class AddPayment extends StatefulWidget {
@@ -63,33 +62,34 @@ class _AddPaymentState extends State<AddPayment> {
             isExpiryDateVisible: true,
             cardHolderName: cardHolderName,
             expiryDate: expiryDate,
-            themeColor: Colors.blue,
-            textColor: Colors.black,
-            cardNumberDecoration: InputDecoration(
-              prefixIcon: const Image(image: AssetImage("assets/card.png")),
-              hintText: '4343 4343 4343 4343',
-              hintStyle: const TextStyle(color: Color(0xFF868686)),
-              focusedBorder: border,
-              enabledBorder: border,
-            ),
-            expiryDateDecoration: InputDecoration(
-              hintStyle: const TextStyle(color: Color(0xFF868686)),
-              focusedBorder: border,
-              enabledBorder: border,
-              hintText: 'MM/YY',
-            ),
-            cvvCodeDecoration: InputDecoration(
-              hintStyle: const TextStyle(color: Color(0xFF868686)),
-              focusedBorder: border,
-              enabledBorder: border,
-              hintText: 'CVV',
-            ),
-            cardHolderDecoration: InputDecoration(
-              hintStyle: const TextStyle(color: Color(0xFF868686)),
-              focusedBorder: border,
-              enabledBorder: border,
-              hintText: 'Card Holder',
-            ),
+            inputConfiguration: InputConfiguration(),
+            // themeColor: Colors.blue,
+            // textColor: Colors.black,
+            // cardNumberDecoration: InputDecoration(
+            //   prefixIcon: const Image(image: AssetImage("assets/card.png")),
+            //   hintText: '4343 4343 4343 4343',
+            //   hintStyle: const TextStyle(color: Color(0xFF868686)),
+            //   focusedBorder: border,
+            //   enabledBorder: border,
+            // ),
+            // expiryDateDecoration: InputDecoration(
+            //   hintStyle: const TextStyle(color: Color(0xFF868686)),
+            //   focusedBorder: border,
+            //   enabledBorder: border,
+            //   hintText: 'MM/YY',
+            // ),
+            // cvvCodeDecoration: InputDecoration(
+            //   hintStyle: const TextStyle(color: Color(0xFF868686)),
+            //   focusedBorder: border,
+            //   enabledBorder: border,
+            //   hintText: 'CVV',
+            // ),
+            // cardHolderDecoration: InputDecoration(
+            //   hintStyle: const TextStyle(color: Color(0xFF868686)),
+            //   focusedBorder: border,
+            //   enabledBorder: border,
+            //   hintText: 'Card Holder',
+            // ),
             onCreditCardModelChange: onCreditCardModelChange,
           ),
           Padding(
