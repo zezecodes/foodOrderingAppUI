@@ -40,7 +40,8 @@ class _HomepageState extends State<Homepage> {
               children: [
                 Padding(
                   padding: EdgeInsets.only(
-                      left: MediaQuery.of(context).size.width * 0.25),
+                      left: MediaQuery.of(context).size.width * 0.25,
+                      bottom: MediaQuery.of(context).size.width * 0.25),
                   child: Text(
                     "HayStreet, Perth",
                     style: GoogleFonts.notoSans(

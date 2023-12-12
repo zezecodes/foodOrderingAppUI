@@ -27,7 +27,7 @@ class TopPage extends StatelessWidget {
           ),
           Padding(
             padding:
-                EdgeInsets.only(left: MediaQuery.of(context).size.width * 0.5),
+                EdgeInsets.only(left: MediaQuery.of(context).size.width * 0.65),
             child: Text(title,
                 style: GoogleFonts.notoSans(
                     fontSize: 20, fontWeight: FontWeight.w600)),
