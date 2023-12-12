@@ -99,15 +99,19 @@ class _SignInPageState extends State<SignInPage> {
             SizedBox(
               height: MediaQuery.of(context).size.height * 0.01,
             ),
-            TextButton(
-                onPressed: () {
-                  Navigator.of(context).pushNamed("/fourth");
-                },
-                child: Text(
-                  "Forgot Password?",
-                  style:
-                      GoogleFonts.notoSans(fontSize: 16, color: Colors.black),
-                )),
+            Padding(
+              padding: EdgeInsets.only(
+                  left: MediaQuery.of(context).size.width * 0.5),
+              child: TextButton(
+                  onPressed: () {
+                    Navigator.of(context).pushNamed("/fourth");
+                  },
+                  child: Text(
+                    "Forgot Password?",
+                    style:
+                        GoogleFonts.notoSans(fontSize: 16, color: Colors.black),
+                  )),
+            ),
             SizedBox(
               height: MediaQuery.of(context).size.height * 0.01,
             ),
