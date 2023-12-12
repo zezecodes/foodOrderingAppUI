@@ -75,47 +75,46 @@ class _HomepageState extends State<Homepage> {
         ],
       ),
       backgroundColor: Colors.white,
-      resizeToAvoidBottomInset: false,
+      // resizeToAvoidBottomInset: false,
       body: SingleChildScrollView(
         scrollDirection: Axis.vertical,
-        child: SafeArea(
-          child: Column(
-            children: [
-              const PictureSlider(),
-              Padding(
-                padding: EdgeInsets.only(
-                    top: MediaQuery.of(context).size.height * 0.04),
-                child: SeeAll(text: "Featured Partners"),
+        child: Column(
+          children: [
+            const PictureSlider(),
+            Padding(
+              padding: EdgeInsets.only(
+                top: MediaQuery.of(context).size.height * 0.04,
               ),
+              child: SeeAll(text: "Featured Partners"),
+            ),
 
-              // PictureBox One
-              const PictureScroll1(),
+            // PictureBox One
+            const PictureScroll1(),
 
-              // Banner Picture
-              BannerPicture(picture: 'assets/Banner.png'),
-              Padding(
-                padding: EdgeInsets.only(
-                    top: MediaQuery.of(context).size.height * 0.04),
-                child: SeeAll(
-                  text: 'Best Picks Restaurants by Team',
-                ),
+            // Banner Picture
+            BannerPicture(picture: 'assets/Banner.png'),
+            Padding(
+              padding: EdgeInsets.only(
+                  top: MediaQuery.of(context).size.height * 0.04),
+              child: SeeAll(
+                text: 'Best Picks Restaurants by Team',
               ),
+            ),
 
-              // Picture Scroll 2
-              const PictureScroll2(),
-              Padding(
-                padding: const EdgeInsets.only(top: 1),
-                child: SeeAll(
-                  text: 'All Restaurants',
-                ),
+            // Picture Scroll 2
+            const PictureScroll2(),
+            Padding(
+              padding: const EdgeInsets.only(top: 1),
+              child: SeeAll(
+                text: 'All Restaurants',
               ),
+            ),
 
-              // Banner Picture 2
-              BannerPicture(
-                picture: 'assets/vegs.png',
-              )
-            ],
-          ),
+            // Banner Picture 2
+            BannerPicture(
+              picture: 'assets/vegs.png',
+            )
+          ],
         ),
       ),
     );
