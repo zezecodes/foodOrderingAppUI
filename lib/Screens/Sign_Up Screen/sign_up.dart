@@ -149,9 +149,9 @@ class _SignUpPageState extends State<SignUpPage> {
                 },
                 style: ElevatedButton.styleFrom(
                     elevation: 10,
-                    backgroundColor: Colors.amber,
+                    backgroundColor: Color(0xFFEEA734),
                     shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(20))),
+                        borderRadius: BorderRadius.circular(10))),
                 child: Text(
                   "SIGN UP",
                   style: GoogleFonts.poppins(

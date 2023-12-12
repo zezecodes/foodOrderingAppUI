@@ -23,11 +23,13 @@ class _HomepageState extends State<Homepage> {
         automaticallyImplyLeading: false,
         elevation: 0,
         title: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
           children: [
             Padding(
               padding: EdgeInsets.only(
-                  top: MediaQuery.of(context).size.height * 0.01,
-                  left: MediaQuery.of(context).size.width * 0.08),
+                top: MediaQuery.of(context).size.height * 0.05,
+                left: MediaQuery.of(context).size.width * 0.08,
+              ),
               child: Text(
                 "Delivery To",
                 style: GoogleFonts.notoSans(
@@ -36,24 +38,25 @@ class _HomepageState extends State<Homepage> {
                     color: const Color(0xFFEEA734)),
               ),
             ),
-            Row(
-              children: [
-                Padding(
-                  padding: EdgeInsets.only(
-                      left: MediaQuery.of(context).size.width * 0.25,
-                      bottom: MediaQuery.of(context).size.width * 0.25),
-                  child: Text(
+            Padding(
+              padding: EdgeInsets.only(
+                  left: MediaQuery.of(context).size.width * 0.25,
+                  bottom: MediaQuery.of(context).size.height * 0.04),
+              child: Row(
+                children: [
+                  Text(
                     "HayStreet, Perth",
                     style: GoogleFonts.notoSans(
                         fontSize: 20,
                         fontWeight: FontWeight.w300,
                         color: Colors.black),
                   ),
-                ),
-                IconButton(
-                    onPressed: () {},
-                    icon: const Icon(Icons.keyboard_arrow_down_sharp))
-              ],
+                  IconButton(
+                      onPressed: () {},
+                      splashRadius: 1,
+                      icon: const Icon(Icons.keyboard_arrow_down_sharp))
+                ],
+              ),
             )
           ],
         ),
