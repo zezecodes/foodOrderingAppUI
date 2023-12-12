@@ -1,6 +1,6 @@
 import 'package:delivery_app/Screens/Homescreen/Homepage/banner_picture.dart';
-import 'package:delivery_app/Screens/Homescreen/Homepage/pictureScroll1.dart';
-import 'package:delivery_app/Screens/Homescreen/Homepage/pictureScroll2.dart';
+import 'package:delivery_app/Screens/Homescreen/Homepage/picture_scroll1.dart';
+import 'package:delivery_app/Screens/Homescreen/Homepage/picture_scroll2.dart';
 import 'package:delivery_app/Screens/Homescreen/Homepage/picture_slider.dart';
 import 'package:delivery_app/Screens/Homescreen/Homepage/see_all_configs.dart';
 import 'package:flutter/material.dart';
@@ -83,13 +83,17 @@ class _HomepageState extends State<Homepage> {
             const PictureSlider(),
             Padding(
               padding: EdgeInsets.only(
-                top: MediaQuery.of(context).size.height * 0.04,
+                top: MediaQuery.of(context).size.height * 0.015,
               ),
               child: SeeAll(text: "Featured Partners"),
             ),
 
             // PictureBox One
-            const PictureScroll1(),
+            const PictureScroll1(
+              image: 'assets/coffee.png',
+              name: 'Krispy Kreme',
+              location: 'St Georgece Terrace, Perth',
+            ),
 
             // Banner Picture
             BannerPicture(picture: 'assets/Banner.png'),
