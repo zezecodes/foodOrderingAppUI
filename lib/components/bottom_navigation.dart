@@ -17,63 +17,62 @@ class _BottomNavigationState extends State<BottomNavigation> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: currentScreen,
-      bottomNavigationBar: BottomNavigationBar(
-          type: BottomNavigationBarType.fixed,
-          items: [
-            BottomNavigationBarItem(
-                icon: IconButton(
-                  icon: const Icon(Icons.food_bank_sharp),
-                  onPressed: () {
-                    setState(() {
-                      currentScreen = const Homepage();
-                      currentIndex = 0;
-                    });
-                    // Navigator.of(context).push(
-                    //   MaterialPageRoute(
-                    //     builder: (context) {
-                    //       return Homepage();
-                    //     },
-                    //   ),
-                    // );
-                  },
-                ),
-                label: "Home"),
-            BottomNavigationBarItem(
-                icon: IconButton(
-                  onPressed: () {
-                    setState(() {
-                      currentScreen = const SearchRestaurantsPage();
-                      currentIndex = 1;
-                    });
-                  },
-                  icon: Icon(
-                    Icons.search,
-                    color: (currentIndex == 1) ? Colors.amber : Colors.grey,
-                  ),
-                ),
-                label: "Search"),
-            BottomNavigationBarItem(
-                icon: IconButton(
-                  icon: const Icon(
-                    Icons.paste_rounded,
-                  ),
-                  onPressed: () {
-                    Navigator.of(context).pushNamed("");
-                  },
-                ),
-                label: "Orders"),
-            BottomNavigationBarItem(
-                icon: IconButton(
-                  icon: const Icon(Icons.person),
-                  onPressed: () {
-                    setState(() {
-                      currentScreen = const AccountSettings();
-                      // currentIndex = 3;
-                    });
-                  },
-                ),
-                label: "Profile")
-          ]),
+      bottomNavigationBar:
+          BottomNavigationBar(type: BottomNavigationBarType.fixed, items: [
+        BottomNavigationBarItem(
+            icon: IconButton(
+              onPressed: () {
+                setState(() {
+                  currentScreen = const Homepage();
+                  currentIndex = 0;
+                });
+              },
+              icon: Icon(
+                Icons.food_bank_sharp,
+                color: (currentIndex == 0) ? Colors.amber : Colors.grey,
+              ),
+            ),
+            label: "Home"),
+        BottomNavigationBarItem(
+            icon: IconButton(
+              onPressed: () {
+                setState(() {
+                  currentScreen = const SearchRestaurantsPage();
+                  currentIndex = 1;
+                });
+              },
+              icon: Icon(
+                Icons.search,
+                color: (currentIndex == 1) ? Colors.amber : Colors.grey,
+              ),
+            ),
+            label: "Search"),
+        BottomNavigationBarItem(
+            icon: IconButton(
+              icon: Icon(
+                Icons.paste_rounded,
+                color: (currentIndex == 2) ? Colors.amber : Colors.grey,
+              ),
+              onPressed: () {
+                Navigator.of(context).pushNamed("");
+              },
+            ),
+            label: "Orders"),
+        BottomNavigationBarItem(
+            icon: IconButton(
+              icon: Icon(
+                Icons.person,
+                color: (currentIndex == 3) ? Colors.amber : Colors.grey,
+              ),
+              onPressed: () {
+                setState(() {
+                  currentScreen = const AccountSettings();
+                  currentIndex = 3;
+                });
+              },
+            ),
+            label: "Profile")
+      ]),
     );
   }
 }
