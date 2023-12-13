@@ -4,8 +4,8 @@ import 'package:flutter/src/widgets/framework.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 class SeeAll extends StatelessWidget {
-  String text;
-  SeeAll({super.key, required this.text});
+  final String text;
+  const SeeAll({super.key, required this.text});
 
   @override
   Widget build(BuildContext context) {

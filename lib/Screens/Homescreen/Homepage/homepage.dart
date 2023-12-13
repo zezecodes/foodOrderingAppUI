@@ -92,10 +92,10 @@ class _HomepageState extends State<Homepage> {
             const PictureScroll1(),
 
             // Banner Picture
-            BannerPicture(picture: 'assets/Banner.png'),
+            const BannerPicture(picture: 'assets/Banner.png'),
             Padding(
               padding: EdgeInsets.only(
-                  top: MediaQuery.of(context).size.height * 0.04),
+                  top: MediaQuery.of(context).size.height * 0.02),
               child: SeeAll(
                 text: 'Best Picks Restaurants by Team',
               ),
@@ -111,7 +111,7 @@ class _HomepageState extends State<Homepage> {
             ),
 
             // Banner Picture 2
-            BannerPicture(
+            const BannerPicture(
               picture: 'assets/vegs.png',
             )
           ],
