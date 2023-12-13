@@ -19,19 +19,22 @@ class _BottomNavigationState extends State<BottomNavigation> {
       body: currentScreen,
       bottomNavigationBar: BottomNavigationBar(
           type: BottomNavigationBarType.fixed,
-          onTap: ((value) {
-            setState(() {});
-          }),
           items: [
             BottomNavigationBarItem(
                 icon: IconButton(
                   icon: const Icon(Icons.food_bank_sharp),
                   onPressed: () {
-                    // setState(() {
-                    //   currentScreen = const Homepage();
-                    //   currentIndex = 0;
-                    // });
-                    currentScreen = Homepage();
+                    setState(() {
+                      currentScreen = const Homepage();
+                      currentIndex = 0;
+                    });
+                    // Navigator.of(context).push(
+                    //   MaterialPageRoute(
+                    //     builder: (context) {
+                    //       return Homepage();
+                    //     },
+                    //   ),
+                    // );
                   },
                 ),
                 label: "Home"),
@@ -65,7 +68,7 @@ class _BottomNavigationState extends State<BottomNavigation> {
                   onPressed: () {
                     setState(() {
                       currentScreen = const AccountSettings();
-                      currentIndex = 3;
+                      // currentIndex = 3;
                     });
                   },
                 ),
