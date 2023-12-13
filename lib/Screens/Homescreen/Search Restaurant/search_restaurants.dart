@@ -20,7 +20,7 @@ class _SearchRestaurantsPageState extends State<SearchRestaurantsPage> {
         title: Text(
           "Search",
           style:
-              GoogleFonts.notoSans(fontSize: 28, fontWeight: FontWeight.w600),
+              GoogleFonts.openSans(fontSize: 28, fontWeight: FontWeight.w600),
         ),
       ),
       body: SafeArea(

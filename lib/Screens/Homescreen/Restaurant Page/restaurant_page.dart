@@ -48,13 +48,13 @@ class _CakePageState extends State<CakePage> {
                                 fit: BoxFit.fill,
                                 image: AssetImage("assets/bigcake.png")),
                             borderRadius: BorderRadius.circular(20)),
-                        child: Padding(
+                        child: const Padding(
                           padding:
-                              const EdgeInsets.only(bottom: 8.0, right: 10),
+                              EdgeInsets.only(bottom: 8.0, right: 10),
                           child: Row(
                             mainAxisAlignment: MainAxisAlignment.end,
                             crossAxisAlignment: CrossAxisAlignment.end,
-                            children: const [
+                            children: [
                               StepProgressIndicator(
                                 totalSteps: 5,
                                 size: 5,
