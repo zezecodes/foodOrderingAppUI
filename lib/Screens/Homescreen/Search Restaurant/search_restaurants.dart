@@ -1,3 +1,4 @@
+import 'package:delivery_app/components/search_box.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
@@ -25,35 +26,23 @@ class _SearchRestaurantsPageState extends State<SearchRestaurantsPage> {
       ),
       body: SafeArea(
         child: SingleChildScrollView(
+          padding: EdgeInsets.symmetric(
+            horizontal: MediaQuery.of(context).size.width * 0.01,
+            // vertical: MediaQuery.of(context).size.height * 0.01,
+          ),
+          physics: const BouncingScrollPhysics(),
           child: Column(
             children: [
               SizedBox(
                 width: MediaQuery.of(context).size.width * 0.8,
-                child: Center(
-                  child: TextFormField(
-                      cursorHeight: 20,
-                      cursorColor: Colors.black,
-                      decoration: InputDecoration(
-                        prefixIcon: const Icon(
-                          Icons.search,
-                          color: Color(0xFF868686),
-                        ),
-                        prefixIconColor: const Color(0xFF868686),
-                        border: OutlineInputBorder(
-                          borderRadius: BorderRadius.circular(10),
-                        ),
-                        focusedBorder: OutlineInputBorder(
-                            borderRadius: BorderRadius.circular(10),
-                            borderSide:
-                                const BorderSide(color: Color(0xFF868686))),
-                        hintText: "Search on Foodly",
-                      )),
+                child: const Center(
+                  child: SearchBox(),
                 ),
               ),
               Padding(
-                padding: EdgeInsets.only(
-                    top: MediaQuery.of(context).size.height * 0.02,
-                    left: MediaQuery.of(context).size.width * 0.04),
+                padding: EdgeInsets.symmetric(
+                    vertical: MediaQuery.of(context).size.height * 0.01,
+                    horizontal: MediaQuery.of(context).size.width * 0.04),
                 child: Row(
                   children: [
                     SizedBox(
@@ -67,28 +56,28 @@ class _SearchRestaurantsPageState extends State<SearchRestaurantsPage> {
                   ],
                 ),
               ),
-              Padding(
-                padding: EdgeInsets.only(
-                    top: MediaQuery.of(context).size.height * 0.02),
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
-                    Column(
-                      children: [
-                        const Image(image: AssetImage("assets/fries.png")),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                children: [
+                  Column(
+                    children: [
+                      const Image(image: AssetImage("assets/fries.png")),
 
-                        //Text under picture
-                        Padding(
-                          padding: EdgeInsets.only(
-                              top: MediaQuery.of(context).size.height * 0.02),
-                          child: Text(
-                            "The Halal Guys",
-                            textAlign: TextAlign.left,
-                            style: GoogleFonts.notoSans(
-                                fontSize: 16, fontWeight: FontWeight.w300),
-                          ),
+                      //Text under picture
+                      Padding(
+                        padding: EdgeInsets.only(
+                            top: MediaQuery.of(context).size.height * 0.02),
+                        child: Text(
+                          "The Halal Guys",
+                          textAlign: TextAlign.left,
+                          style: GoogleFonts.notoSans(
+                              fontSize: 16, fontWeight: FontWeight.w300),
                         ),
-                        Row(
+                      ),
+                      Padding(
+                        padding: EdgeInsets.only(
+                            bottom: MediaQuery.of(context).size.height * 0.02),
+                        child: Row(
                           children: [
                             Text("\$\$",
                                 style: GoogleFonts.notoSans(
@@ -101,27 +90,31 @@ class _SearchRestaurantsPageState extends State<SearchRestaurantsPage> {
                                     fontWeight: FontWeight.w400,
                                     color: const Color(0xFF868686)))
                           ],
-                        )
-                      ],
-                    ),
-                    SizedBox(
-                      width: MediaQuery.of(context).size.width * 0.04,
-                    ),
-                    Column(
-                      children: [
-                        const Image(image: AssetImage("assets/eggs.png")),
-
-                        //Text under picture
-                        Padding(
-                          padding: EdgeInsets.only(
-                              top: MediaQuery.of(context).size.height * 0.02),
-                          child: Text(
-                            "Popeyes 1426 Flmst",
-                            style: GoogleFonts.notoSans(
-                                fontSize: 16, fontWeight: FontWeight.w300),
-                          ),
                         ),
-                        Row(
+                      )
+                    ],
+                  ),
+                  SizedBox(
+                    width: MediaQuery.of(context).size.width * 0.04,
+                  ),
+                  Column(
+                    children: [
+                      const Image(image: AssetImage("assets/eggs.png")),
+
+                      //Text under picture
+                      Padding(
+                        padding: EdgeInsets.only(
+                            top: MediaQuery.of(context).size.height * 0.02),
+                        child: Text(
+                          "Popeyes 1426 Flmst",
+                          style: GoogleFonts.notoSans(
+                              fontSize: 16, fontWeight: FontWeight.w300),
+                        ),
+                      ),
+                      Padding(
+                        padding: EdgeInsets.only(
+                            bottom: MediaQuery.of(context).size.height * 0.02),
+                        child: Row(
                           children: [
                             Text("\$\$",
                                 style: GoogleFonts.notoSans(
@@ -134,33 +127,33 @@ class _SearchRestaurantsPageState extends State<SearchRestaurantsPage> {
                                     fontWeight: FontWeight.w400,
                                     color: const Color(0xFF868686)))
                           ],
-                        )
-                      ],
-                    ),
-                  ],
-                ),
+                        ),
+                      )
+                    ],
+                  ),
+                ],
               ),
-              Padding(
-                padding: EdgeInsets.only(
-                    top: MediaQuery.of(context).size.height * 0.02),
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
-                    Column(
-                      children: [
-                        const Image(image: AssetImage("assets/vegies.png")),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                children: [
+                  Column(
+                    children: [
+                      const Image(image: AssetImage("assets/vegies.png")),
 
-                        //Text under picture
-                        Padding(
-                          padding: EdgeInsets.only(
-                              top: MediaQuery.of(context).size.height * 0.02),
-                          child: Text(
-                            "Mixt - Yerba Buena",
-                            style: GoogleFonts.notoSans(
-                                fontSize: 16, fontWeight: FontWeight.w300),
-                          ),
+                      //Text under picture
+                      Padding(
+                        padding: EdgeInsets.only(
+                            top: MediaQuery.of(context).size.height * 0.02),
+                        child: Text(
+                          "Mixt - Yerba Buena",
+                          style: GoogleFonts.notoSans(
+                              fontSize: 16, fontWeight: FontWeight.w300),
                         ),
-                        Row(
+                      ),
+                      Padding(
+                        padding: EdgeInsets.only(
+                            bottom: MediaQuery.of(context).size.height * 0.02),
+                        child: Row(
                           children: [
                             Text("\$\$",
                                 style: GoogleFonts.notoSans(
@@ -173,27 +166,31 @@ class _SearchRestaurantsPageState extends State<SearchRestaurantsPage> {
                                     fontWeight: FontWeight.w400,
                                     color: const Color(0xFF868686)))
                           ],
-                        )
-                      ],
-                    ),
-                    SizedBox(
-                      width: MediaQuery.of(context).size.width * 0.04,
-                    ),
-                    Column(
-                      children: [
-                        const Image(image: AssetImage("assets/bread.png")),
-
-                        //Text under picture
-                        Padding(
-                          padding: EdgeInsets.only(
-                              top: MediaQuery.of(context).size.height * 0.02),
-                          child: Text(
-                            "Split Bread - Russian",
-                            style: GoogleFonts.notoSans(
-                                fontSize: 16, fontWeight: FontWeight.w300),
-                          ),
                         ),
-                        Row(
+                      )
+                    ],
+                  ),
+                  SizedBox(
+                    width: MediaQuery.of(context).size.width * 0.04,
+                  ),
+                  Column(
+                    children: [
+                      const Image(image: AssetImage("assets/bread.png")),
+
+                      //Text under picture
+                      Padding(
+                        padding: EdgeInsets.only(
+                            top: MediaQuery.of(context).size.height * 0.02),
+                        child: Text(
+                          "Split Bread - Russian",
+                          style: GoogleFonts.notoSans(
+                              fontSize: 16, fontWeight: FontWeight.w300),
+                        ),
+                      ),
+                      Padding(
+                        padding: EdgeInsets.only(
+                            bottom: MediaQuery.of(context).size.height * 0.02),
+                        child: Row(
                           children: [
                             Text("\$\$",
                                 style: GoogleFonts.notoSans(
@@ -206,33 +203,33 @@ class _SearchRestaurantsPageState extends State<SearchRestaurantsPage> {
                                     fontWeight: FontWeight.w400,
                                     color: const Color(0xFF868686)))
                           ],
-                        )
-                      ],
-                    ),
-                  ],
-                ),
+                        ),
+                      )
+                    ],
+                  ),
+                ],
               ),
-              Padding(
-                padding: EdgeInsets.only(
-                    top: MediaQuery.of(context).size.height * 0.02),
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
-                    Column(
-                      children: [
-                        const Image(image: AssetImage("assets/sandwich.png")),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                children: [
+                  Column(
+                    children: [
+                      const Image(image: AssetImage("assets/sandwich.png")),
 
-                        //Text under picture
-                        Padding(
-                          padding: EdgeInsets.only(
-                              top: MediaQuery.of(context).size.height * 0.02),
-                          child: Text(
-                            "The Halal Guys",
-                            style: GoogleFonts.notoSans(
-                                fontSize: 20, fontWeight: FontWeight.w300),
-                          ),
+                      //Text under picture
+                      Padding(
+                        padding: EdgeInsets.only(
+                            top: MediaQuery.of(context).size.height * 0.02),
+                        child: Text(
+                          "The Halal Guys",
+                          style: GoogleFonts.notoSans(
+                              fontSize: 20, fontWeight: FontWeight.w300),
                         ),
-                        Row(
+                      ),
+                      Padding(
+                        padding: EdgeInsets.only(
+                            bottom: MediaQuery.of(context).size.height * 0.02),
+                        child: Row(
                           children: [
                             Text("\$\$",
                                 style: GoogleFonts.notoSans(
@@ -245,24 +242,28 @@ class _SearchRestaurantsPageState extends State<SearchRestaurantsPage> {
                                     fontWeight: FontWeight.w400,
                                     color: const Color(0xFF868686)))
                           ],
-                        )
-                      ],
-                    ),
-                    Column(
-                      children: [
-                        const Image(image: AssetImage("assets/toast.png")),
-
-                        //Text under picture
-                        Padding(
-                          padding: EdgeInsets.only(
-                              top: MediaQuery.of(context).size.height * 0.02),
-                          child: Text(
-                            "Popeyes 1426 Flmst",
-                            style: GoogleFonts.notoSans(
-                                fontSize: 20, fontWeight: FontWeight.w300),
-                          ),
                         ),
-                        Row(
+                      )
+                    ],
+                  ),
+                  Column(
+                    children: [
+                      const Image(image: AssetImage("assets/toast.png")),
+
+                      //Text under picture
+                      Padding(
+                        padding: EdgeInsets.only(
+                            top: MediaQuery.of(context).size.height * 0.02),
+                        child: Text(
+                          "Popeyes 1426 Flmst",
+                          style: GoogleFonts.notoSans(
+                              fontSize: 20, fontWeight: FontWeight.w300),
+                        ),
+                      ),
+                      Padding(
+                        padding: EdgeInsets.only(
+                            bottom: MediaQuery.of(context).size.height * 0.02),
+                        child: Row(
                           children: [
                             Text("\$\$",
                                 style: GoogleFonts.notoSans(
@@ -275,33 +276,33 @@ class _SearchRestaurantsPageState extends State<SearchRestaurantsPage> {
                                     fontWeight: FontWeight.w400,
                                     color: const Color(0xFF868686)))
                           ],
-                        )
-                      ],
-                    ),
-                  ],
-                ),
+                        ),
+                      )
+                    ],
+                  ),
+                ],
               ),
-              Padding(
-                padding: EdgeInsets.only(
-                    top: MediaQuery.of(context).size.height * 0.02),
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
-                    Column(
-                      children: [
-                        const Image(image: AssetImage("assets/fries.png")),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                children: [
+                  Column(
+                    children: [
+                      const Image(image: AssetImage("assets/fries.png")),
 
-                        //Text under picture
-                        Padding(
-                          padding: EdgeInsets.only(
-                              top: MediaQuery.of(context).size.height * 0.02),
-                          child: Text(
-                            "The Halal Guys",
-                            style: GoogleFonts.notoSans(
-                                fontSize: 20, fontWeight: FontWeight.w300),
-                          ),
+                      //Text under picture
+                      Padding(
+                        padding: EdgeInsets.only(
+                            top: MediaQuery.of(context).size.height * 0.02),
+                        child: Text(
+                          "The Halal Guys",
+                          style: GoogleFonts.notoSans(
+                              fontSize: 20, fontWeight: FontWeight.w300),
                         ),
-                        Row(
+                      ),
+                      Padding(
+                        padding: EdgeInsets.only(
+                            bottom: MediaQuery.of(context).size.height * 0.02),
+                        child: Row(
                           children: [
                             Text("\$\$",
                                 style: GoogleFonts.notoSans(
@@ -314,24 +315,28 @@ class _SearchRestaurantsPageState extends State<SearchRestaurantsPage> {
                                     fontWeight: FontWeight.w400,
                                     color: const Color(0xFF868686)))
                           ],
-                        )
-                      ],
-                    ),
-                    Column(
-                      children: [
-                        const Image(image: AssetImage("assets/eggs.png")),
-
-                        //Text under picture
-                        Padding(
-                          padding: EdgeInsets.only(
-                              top: MediaQuery.of(context).size.height * 0.02),
-                          child: Text(
-                            "Popeyes 1426 Flmst",
-                            style: GoogleFonts.notoSans(
-                                fontSize: 20, fontWeight: FontWeight.w300),
-                          ),
                         ),
-                        Row(
+                      )
+                    ],
+                  ),
+                  Column(
+                    children: [
+                      const Image(image: AssetImage("assets/eggs.png")),
+
+                      //Text under picture
+                      Padding(
+                        padding: EdgeInsets.only(
+                            top: MediaQuery.of(context).size.height * 0.02),
+                        child: Text(
+                          "Popeyes 1426 Flmst",
+                          style: GoogleFonts.notoSans(
+                              fontSize: 20, fontWeight: FontWeight.w300),
+                        ),
+                      ),
+                      Padding(
+                        padding: EdgeInsets.only(
+                            bottom: MediaQuery.of(context).size.height * 0.02),
+                        child: Row(
                           children: [
                             Text("\$\$",
                                 style: GoogleFonts.notoSans(
@@ -344,11 +349,11 @@ class _SearchRestaurantsPageState extends State<SearchRestaurantsPage> {
                                     fontWeight: FontWeight.w400,
                                     color: const Color(0xFF868686)))
                           ],
-                        )
-                      ],
-                    ),
-                  ],
-                ),
+                        ),
+                      )
+                    ],
+                  ),
+                ],
               ),
             ],
           ),
