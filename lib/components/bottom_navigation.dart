@@ -27,10 +27,11 @@ class _BottomNavigationState extends State<BottomNavigation> {
                 icon: IconButton(
                   icon: const Icon(Icons.food_bank_sharp),
                   onPressed: () {
-                    setState(() {
-                      currentScreen = const Homepage();
-                      currentIndex = 0;
-                    });
+                    // setState(() {
+                    //   currentScreen = const Homepage();
+                    //   currentIndex = 0;
+                    // });
+                    currentScreen = Homepage();
                   },
                 ),
                 label: "Home"),

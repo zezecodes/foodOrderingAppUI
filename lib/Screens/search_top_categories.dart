@@ -95,11 +95,11 @@ class _TopCategoriesSearchState extends State<TopCategoriesSearch> {
                     )
                   ],
                 ),
-                SizedBox(
+                const SizedBox(
                   width: 20,
                 ),
                 Stack(alignment: AlignmentDirectional.center, children: [
-                  Image(image: AssetImage("assets/bakery.png")),
+                  const Image(image: AssetImage("assets/bakery.png")),
                   Text(
                     "Bakery",
                     style: GoogleFonts.notoSans(
@@ -175,9 +175,9 @@ class _TopCategoriesSearchState extends State<TopCategoriesSearch> {
             const SizedBox(
               height: 20,
             ),
-            Row(
+            const Row(
               mainAxisAlignment: MainAxisAlignment.center,
-              children: const [
+              children: [
                 Image(image: AssetImage("assets/fastfood.png")),
                 SizedBox(
                   width: 20,
