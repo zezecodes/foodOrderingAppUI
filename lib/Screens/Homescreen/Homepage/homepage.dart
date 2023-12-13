@@ -95,7 +95,8 @@ class _HomepageState extends State<Homepage> {
             const BannerPicture(picture: 'assets/Banner.png'),
             Padding(
               padding: EdgeInsets.symmetric(
-                  horizontal: MediaQuery.of(context).size.width * 0.04),
+                  horizontal: MediaQuery.of(context).size.width * 0.04,
+                  vertical: MediaQuery.of(context).size.height * 0.01),
               child: const SeeAll(
                 text: 'Best Picks Restaurants by Team',
               ),

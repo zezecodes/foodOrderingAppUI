@@ -37,27 +37,38 @@ class _PictureScroll2State extends State<PictureScroll2> {
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: MediaQuery.of(context).size.height * 0.35,
-      padding: const EdgeInsets.symmetric(horizontal: 15),
+      height: MediaQuery.of(context).size.height * 0.28,
+      // width: MediaQuery.of(context).size.width * 2,
+      padding: const EdgeInsets.symmetric(horizontal: 20),
+      decoration: BoxDecoration(
+        borderRadius: BorderRadius.circular(10),
+        // color: Colors.amber,
+      ),
       child: ListView.separated(
         scrollDirection: Axis.horizontal,
         physics: const BouncingScrollPhysics(),
         shrinkWrap: true,
         itemBuilder: (context, index) {
           return Column(
+            mainAxisAlignment: MainAxisAlignment.center,
             children: [
               Container(
-                width: 160,
+                width: MediaQuery.of(context).size.width * 0.9,
                 height: 200,
-                decoration: const BoxDecoration(),
-                child: Image.asset(secondMappings![index]['image']),
+                clipBehavior: Clip.hardEdge,
+                decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(30),
+                  color: Colors.blue,
+                ),
+                child: Image.asset(secondMappings![index]['image'],
+                    fit: BoxFit.cover),
               ),
-              Text(mappings![index]['name'],
+              Text(secondMappings![index]['name'],
                   style: GoogleFonts.notoSans(
                     fontWeight: FontWeight.w300,
                     fontSize: 20,
                   )),
-              Text(mappings![index]['location'],
+              Text(secondMappings![index]['location'],
                   style: GoogleFonts.notoSans(
                     fontWeight: FontWeight.w400,
                     fontSize: 16,
@@ -68,7 +79,7 @@ class _PictureScroll2State extends State<PictureScroll2> {
         separatorBuilder: (context, index) {
           return SizedBox(width: MediaQuery.of(context).size.width * 0.05);
         },
-        itemCount: 2,
+        itemCount: mappings!.length,
       ),
     );
   }
