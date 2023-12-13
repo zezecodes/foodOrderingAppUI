@@ -2,14 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 class PictureScroll1 extends StatefulWidget {
-  final String image;
-  final String name;
-  final String location;
+
   const PictureScroll1(
-      {super.key,
-      required this.image,
-      required this.name,
-      required this.location});
+      {super.key,});
 
   @override
   State<PictureScroll1> createState() => _PictureScroll1State();

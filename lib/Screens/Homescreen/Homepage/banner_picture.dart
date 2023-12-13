@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 
 class BannerPicture extends StatefulWidget {
-  String? picture;
-  BannerPicture({super.key,required this.picture});
+  final String? picture;
+  const BannerPicture({super.key,required this.picture});
 
   @override
   State<BannerPicture> createState() => _BannerPictureState();

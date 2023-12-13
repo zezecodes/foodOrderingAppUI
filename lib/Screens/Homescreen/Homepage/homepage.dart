@@ -89,11 +89,7 @@ class _HomepageState extends State<Homepage> {
             ),
 
             // PictureBox One
-            const PictureScroll1(
-              image: 'assets/coffee.png',
-              name: 'Krispy Kreme',
-              location: 'St Georgece Terrace, Perth',
-            ),
+            const PictureScroll1(),
 
             // Banner Picture
             BannerPicture(picture: 'assets/Banner.png'),
