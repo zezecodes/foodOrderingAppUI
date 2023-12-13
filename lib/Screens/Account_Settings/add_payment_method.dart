@@ -31,6 +31,7 @@ class _AddPaymentState extends State<AddPayment> {
     super.initState();
   }
 
+  @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
@@ -41,7 +42,7 @@ class _AddPaymentState extends State<AddPayment> {
         leading: IconButton(
             splashRadius: 1,
             onPressed: () {
-              Navigator.of(context).pushNamed("/eighteenth");
+              Navigator.of(context).pop();
             },
             icon: const Icon(Icons.arrow_back_ios_new)),
       ),

@@ -26,7 +26,7 @@ class _ChangePasswordState extends State<ChangePassword> {
         leading: IconButton(
             splashRadius: 1,
             onPressed: () {
-              Navigator.of(context).pushNamed("/eleventh");
+              Navigator.of(context).pop();
             },
             icon: const Icon(Icons.arrow_back_ios_new)),
       ),

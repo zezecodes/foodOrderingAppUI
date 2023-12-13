@@ -26,7 +26,7 @@ class _ProfileInformationState extends State<ProfileInformation> {
         leading: IconButton(
             splashRadius: 1,
             onPressed: () {
-              Navigator.of(context).pushNamed("/fourteenth");
+              Navigator.of(context).pop();
             },
             icon: const Icon(Icons.arrow_back_ios_new)),
       ),

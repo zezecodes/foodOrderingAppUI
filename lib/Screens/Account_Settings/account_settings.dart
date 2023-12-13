@@ -1,4 +1,3 @@
-import 'package:delivery_app/components/bottom_navigation.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:flutter/cupertino.dart';
