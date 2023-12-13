@@ -11,7 +11,7 @@ class SeeAll extends StatelessWidget {
       mainAxisAlignment: MainAxisAlignment.center,
       children: [
         SizedBox(
-          width: MediaQuery.of(context).size.width * 0.5,
+          width: MediaQuery.of(context).size.width * 0.6,
           child: Text(
             text,
             style:
@@ -20,7 +20,7 @@ class SeeAll extends StatelessWidget {
         ),
         Padding(
           padding:
-              EdgeInsets.only(left: MediaQuery.of(context).size.width * 0.2),
+              EdgeInsets.only(left: MediaQuery.of(context).size.width * 0.15),
           child: TextButton(
               onPressed: () {},
               child: Text(
