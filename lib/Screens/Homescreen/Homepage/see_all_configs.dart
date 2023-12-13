@@ -15,7 +15,7 @@ class SeeAll extends StatelessWidget {
           child: Text(
             text,
             style:
-                GoogleFonts.notoSans(fontSize: 24, fontWeight: FontWeight.w600),
+                GoogleFonts.openSans(fontSize: 24, fontWeight: FontWeight.w600),
           ),
         ),
         Padding(
@@ -25,7 +25,7 @@ class SeeAll extends StatelessWidget {
               onPressed: () {},
               child: Text(
                 "See all",
-                style: GoogleFonts.notoSans(
+                style: GoogleFonts.openSans(
                     fontSize: 16,
                     fontWeight: FontWeight.w400,
                     color: const Color(0xFFF8B64C)),

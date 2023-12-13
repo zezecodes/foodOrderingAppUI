@@ -85,7 +85,7 @@ class _HomepageState extends State<Homepage> {
               padding: EdgeInsets.only(
                 top: MediaQuery.of(context).size.height * 0.015,
               ),
-              child: SeeAll(text: "Featured Partners"),
+              child: const SeeAll(text: "Featured Partners"),
             ),
 
             // PictureBox One
@@ -96,15 +96,15 @@ class _HomepageState extends State<Homepage> {
             Padding(
               padding: EdgeInsets.symmetric(
                   horizontal: MediaQuery.of(context).size.width * 0.04),
-              child: SeeAll(
+              child: const SeeAll(
                 text: 'Best Picks Restaurants by Team',
               ),
             ),
 
             // Picture Scroll 2
             const PictureScroll2(),
-            Padding(
-              padding: const EdgeInsets.only(top: 1),
+            const Padding(
+              padding: EdgeInsets.only(top: 1),
               child: SeeAll(
                 text: 'All Restaurants',
               ),
