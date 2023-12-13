@@ -96,146 +96,36 @@ class _SearchRestaurantsPageState extends State<SearchRestaurantsPage> {
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 children: [
-                  Column(
-                    children: [
-                      const Image(image: AssetImage("assets/sandwich.png")),
-
-                      //Text under picture
-                      Padding(
-                        padding: EdgeInsets.only(
-                            top: MediaQuery.of(context).size.height * 0.02),
-                        child: Text(
-                          "The Halal Guys",
-                          style: GoogleFonts.notoSans(
-                              fontSize: 20, fontWeight: FontWeight.w300),
-                        ),
-                      ),
-                      Padding(
-                        padding: EdgeInsets.only(
-                            bottom: MediaQuery.of(context).size.height * 0.02),
-                        child: Row(
-                          children: [
-                            Text("\$\$",
-                                style: GoogleFonts.notoSans(
-                                    fontSize: 13,
-                                    fontWeight: FontWeight.w400,
-                                    color: const Color(0xFF868686))),
-                            Text("American",
-                                style: GoogleFonts.notoSans(
-                                    fontSize: 13,
-                                    fontWeight: FontWeight.w400,
-                                    color: const Color(0xFF868686)))
-                          ],
-                        ),
-                      )
-                    ],
+                  const RestaurantBox(
+                    name: 'The Halal Guys',
+                    image: 'assets/sandwich.png',
+                    type: 'American',
                   ),
-                  Column(
-                    children: [
-                      const Image(image: AssetImage("assets/toast.png")),
-
-                      //Text under picture
-                      Padding(
-                        padding: EdgeInsets.only(
-                            top: MediaQuery.of(context).size.height * 0.02),
-                        child: Text(
-                          "Popeyes 1426 Flmst",
-                          style: GoogleFonts.notoSans(
-                              fontSize: 20, fontWeight: FontWeight.w300),
-                        ),
-                      ),
-                      Padding(
-                        padding: EdgeInsets.only(
-                            bottom: MediaQuery.of(context).size.height * 0.02),
-                        child: Row(
-                          children: [
-                            Text("\$\$",
-                                style: GoogleFonts.notoSans(
-                                    fontSize: 13,
-                                    fontWeight: FontWeight.w400,
-                                    color: const Color(0xFF868686))),
-                            Text("American",
-                                style: GoogleFonts.notoSans(
-                                    fontSize: 13,
-                                    fontWeight: FontWeight.w400,
-                                    color: const Color(0xFF868686)))
-                          ],
-                        ),
-                      )
-                    ],
+                  SizedBox(
+                    width: MediaQuery.of(context).size.width * 0.04,
+                  ),
+                  const RestaurantBox(
+                    name: 'Popeyes 1426 Flmst',
+                    image: 'assets/toast.png',
+                    type: 'American',
                   ),
                 ],
               ),
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 children: [
-                  Column(
-                    children: [
-                      const Image(image: AssetImage("assets/fries.png")),
-
-                      //Text under picture
-                      Padding(
-                        padding: EdgeInsets.only(
-                            top: MediaQuery.of(context).size.height * 0.02),
-                        child: Text(
-                          "The Halal Guys",
-                          style: GoogleFonts.notoSans(
-                              fontSize: 20, fontWeight: FontWeight.w300),
-                        ),
-                      ),
-                      Padding(
-                        padding: EdgeInsets.only(
-                            bottom: MediaQuery.of(context).size.height * 0.02),
-                        child: Row(
-                          children: [
-                            Text("\$\$",
-                                style: GoogleFonts.notoSans(
-                                    fontSize: 13,
-                                    fontWeight: FontWeight.w400,
-                                    color: const Color(0xFF868686))),
-                            Text("American",
-                                style: GoogleFonts.notoSans(
-                                    fontSize: 13,
-                                    fontWeight: FontWeight.w400,
-                                    color: const Color(0xFF868686)))
-                          ],
-                        ),
-                      )
-                    ],
+                  const RestaurantBox(
+                    name: 'The Halal Guys',
+                    image: 'assets/fries.png',
+                    type: 'American',
                   ),
-                  Column(
-                    children: [
-                      const Image(image: AssetImage("assets/eggs.png")),
-
-                      //Text under picture
-                      Padding(
-                        padding: EdgeInsets.only(
-                            top: MediaQuery.of(context).size.height * 0.02),
-                        child: Text(
-                          "Popeyes 1426 Flmst",
-                          style: GoogleFonts.notoSans(
-                              fontSize: 20, fontWeight: FontWeight.w300),
-                        ),
-                      ),
-                      Padding(
-                        padding: EdgeInsets.only(
-                            bottom: MediaQuery.of(context).size.height * 0.02),
-                        child: Row(
-                          children: [
-                            Text("\$\$",
-                                style: GoogleFonts.notoSans(
-                                    fontSize: 13,
-                                    fontWeight: FontWeight.w400,
-                                    color: const Color(0xFF868686))),
-                            Text("American",
-                                style: GoogleFonts.notoSans(
-                                    fontSize: 13,
-                                    fontWeight: FontWeight.w400,
-                                    color: const Color(0xFF868686)))
-                          ],
-                        ),
-                      )
-                    ],
+                  SizedBox(
+                    width: MediaQuery.of(context).size.width * 0.04,
+                  ),
+                  const RestaurantBox(
+                    name: 'Popeyes 1426 Flmst',
+                    image: 'assets/eggs.png',
+                    type: 'American',
                   ),
                 ],
               ),
